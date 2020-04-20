@@ -1,0 +1,62 @@
+/*main css for the final project*/
+
+body{
+	margin:0;
+	padding:0;
+
+}
+
+#container{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-column-gap: 0;
+	padding:0;
+}
+
+
+canvas{
+	/*border: 2px solid blue;*/
+	height: 100vh;
+	width: 480px;
+}
+
+#c1{
+	filter:hue-rotate(120deg) blur(1.5px);
+}
+#c2{
+	filter:hue-rotate(90deg) blur(1.5px);
+
+}
+#c3{
+	filter: sepia(100%) blur(1.5px);
+}
+
+
+#feather{
+	width:400px;
+	height:200px;
+	position: absolute;
+	left:30px;
+	top:90px;
+	fill: gray;
+}
+
+#flower{
+	position:absolute;
+	width:300px;
+	height:300px;
+	left:570px;
+	top:45px;
+	fill:red;
+}
+
+#leaf{
+	position:absolute;
+	width:300px;
+	height:250px;
+	left:1045px;
+	top:65px;
+	fill:orange;
+}
+
+
