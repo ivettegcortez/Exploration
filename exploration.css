@@ -3,7 +3,7 @@
 body{
 	margin:0;
 	padding:0;
-
+	overflow: hidden;
 }
 
 #container{
@@ -20,15 +20,17 @@ canvas{
 	width: 480px;
 }
 
+
 #c1{
-	filter:hue-rotate(120deg) blur(1.5px);
+	filter:hue-rotate(140deg);
+
 }
 #c2{
-	filter:hue-rotate(90deg) blur(1.5px);
+	filter:hue-rotate(150deg);
 
 }
 #c3{
-	filter: sepia(100%) blur(1.5px);
+	filter:hue-rotate(320deg);
 }
 
 
@@ -37,16 +39,16 @@ canvas{
 	height:200px;
 	position: absolute;
 	left:30px;
-	top:90px;
+	top:110px;
 	fill: gray;
 }
 
 #flower{
 	position:absolute;
-	width:300px;
-	height:300px;
-	left:570px;
-	top:45px;
+	width:220px;
+	height:220px;
+	left:615px;
+	top:75px;
 	fill:red;
 }
 
@@ -55,8 +57,22 @@ canvas{
 	width:300px;
 	height:250px;
 	left:1045px;
-	top:65px;
+	top:85px;
 	fill:orange;
 }
+
+
+@keyframes moveExpand{
+	0%{transform:translateY(0px) scale(1) rotate(0deg);}
+	65%{transform:translateY(400px) rotate(180deg);}
+	100%{transform: scale(6) rotate(360deg);}
+
+}
+
+
+
+
+
+
 
 

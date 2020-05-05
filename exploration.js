@@ -14,6 +14,8 @@ const img2 = document.getElementById('tropical');
 const img3 = document.getElementById('nature');
 
 const feather = document.getElementById('feather');
+const flower = document.getElementById('flower');
+const leaf = document.getElementById('leaf');
 
 
 let pxScale = window.devicePixelRatio;
@@ -87,7 +89,7 @@ function canvas1draw(){
 	// context.fillStyle = "rgba(230, 157, 42, 0.7)";
 
 
-	context.fillStyle = "hsla(" + color1 + ", 79%, 53%, 0.7)";
+	context.fillStyle = "hsla(" + color1 + ", 54%, 47%, 0.5)";
 
 	if (color1>=360){
 		color1 = 0;
@@ -95,7 +97,7 @@ function canvas1draw(){
 	color1 += 1;
 
 	// pixel compositing
-    context.globalCompositeOperation = 'difference';
+    context.globalCompositeOperation = 'exclusion';
 
 	// context.beginPath();
 	// context.moveTo(240,100);
@@ -122,18 +124,18 @@ function canvas1draw(){
 	context.restore();
 
 	context.restore();
-	degrees1 += 1;
+	degrees1 += 2;
 
 
 
 	// context.fill(path1);
 
 	// drawing text
-    context.font = "40px sans-serif";
-    context.textBaseline = "middle";
-    context.textAlign = "center";
-    context.fillStyle = 'white'; 
-    context.fillText("City", width/2, height/3.25);
+    // context.font = "40px sans-serif";
+    // context.textBaseline = "middle";
+    // context.textAlign = "center";
+    // context.fillStyle = 'white'; 
+    // context.fillText("City", width/2, height/3.25);
 
 
 	requestAnimationFrame(canvas1draw);
@@ -155,15 +157,15 @@ function canvas2draw(){
     context2.translate(-100, -100);
 
 
-	context2.fillStyle = "hsla(" + color2 + ", 31%, 44%, 0.9)";
+	context2.fillStyle = "hsla(" + color2 + ", 54%, 47%, 0.5)";
 
 	if (color2>=360){
 		color2 = 0;
 	}
-	color2 += 2;
+	color2 += 1;
 
 	// pixel compositing
-    context2.globalCompositeOperation = 'difference';
+    context2.globalCompositeOperation = 'exclusion';
 
 	// context2.beginPath();
 	// context2.moveTo(240,100);
@@ -180,16 +182,16 @@ function canvas2draw(){
 
 
 	context2.restore();
-	degrees2 += 1;
+	degrees2 += 2;
 
 
 
 	// drawing text
-    context2.font = "40px sans-serif";
-    context2.textBaseline = "middle";
-    context2.textAlign = "center";
-    context2.fillStyle = 'white'; 
-    context2.fillText("Tropical", width/2, height/3.25);
+    // context2.font = "40px sans-serif";
+    // context2.textBaseline = "middle";
+    // context2.textAlign = "center";
+    // context2.fillStyle = 'white'; 
+    // context2.fillText("Tropical", width/2, height/3.25);
 
 
 	requestAnimationFrame(canvas2draw);
@@ -213,16 +215,16 @@ function canvas3draw(){
 
 	// context3.fillStyle = "rgba(232, 227, 132, 0.9)";
 
-	context3.fillStyle = "hsla(" + color3 + ", 68%, 71%, 0.9)";
+	context3.fillStyle = "hsla(" + color3 + ", 54%, 47%, .5)";
 
 
 	if (color3>=360){
 		color3 = 0;
 	}
-	color3 += 2;
+	color3 += 1;
 
 	// pixel compositing
-    context3.globalCompositeOperation = 'difference';
+    context3.globalCompositeOperation = 'exclusion';
 
 	// context3.beginPath();
 	// context3.moveTo(240,100);
@@ -238,21 +240,72 @@ function canvas3draw(){
 	context3.restore();
 	context3.restore();
 
-	degrees3 += 1;
+	degrees3 += 2;
 
 
 
 	// drawing text
-    context3.font = "40px sans-serif";
-    context3.textBaseline = "middle";
-    context3.textAlign = "center";
-    context3.fillStyle = 'white'; 
-    context3.fillText("Nature", width/2, height/3.25);
+    // context3.font = "40px sans-serif";
+    // context3.textBaseline = "middle";
+    // context3.textAlign = "center";
+    // context3.fillStyle = 'white'; 
+    // context3.fillText("Nature", width/2, height/3.25);
 
 	requestAnimationFrame(canvas3draw);
 }
 
 
 
+
+// feather for city
+
+feather.onclick = function featherfly(){
+	feather.style.animation = "moveExpand 3s ";
+
+}
+
+feather.onanimationend = function animatefeather(){
+	redirect1()
+}
+
+function redirect1(){
+	location.href = "city/city.html";
+}
+
+// flower for tropical
+
+flower.onclick = function flowerfly(){
+	flower.style.animation = "moveExpand 3s";
+
+}
+
+flower.onanimationend = function animateflower(){
+	redirect2()
+}
+function redirect2(){
+	location.href = "tropical/tropical.html";
+}
+
+// flower for nature
+
+leaf.onclick = function leaffly(){
+	leaf.style.animation = "moveExpand 3s";
+}
+
+leaf.onanimationend = function animateleaf(){
+	redirect3()
+}
+function redirect3(){
+	location.href = "nature/nature.html";
+}
+
+
 window.addEventListener('load', setup);
+// window.addEventListener('resize', setup);
+
+
+
+
+
+
 
