@@ -260,7 +260,7 @@ function canvas3draw(){
 // feather for city
 
 feather.onclick = function featherfly(){
-	feather.style.animation = "moveExpand 3s ";
+	feather.style.animation = "moveExpand 3s forwards";
 
 }
 
@@ -275,7 +275,7 @@ function redirect1(){
 // flower for tropical
 
 flower.onclick = function flowerfly(){
-	flower.style.animation = "moveExpand 3s";
+	flower.style.animation = "moveExpand 3s forwards";
 
 }
 
@@ -289,7 +289,7 @@ function redirect2(){
 // flower for nature
 
 leaf.onclick = function leaffly(){
-	leaf.style.animation = "moveExpand 3s";
+	leaf.style.animation = "moveExpand 3s forwards";
 }
 
 leaf.onanimationend = function animateleaf(){
